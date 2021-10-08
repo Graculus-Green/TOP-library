@@ -2,13 +2,13 @@ let myLibrary = [{
     title:"Book, yo",
     author:"Some Writer",
     pages: 297,
-    read: true,
+    read: "Yes",
 },
 {
     title:"Another Book",
     author:"Another Person",
     pages: 603,
-    read: false,
+    read: "No",
 },];
 
 
@@ -33,12 +33,16 @@ let addBookToLibrary = () => {
         title = addTitle.value;
         author = addAuthor.value;
         pages = addPages.value;
-        read = addRead.value
 
-        newBook = new Book(title, author, pages, read)
-        myLibrary.push(newBook)
-        
-        
+        if (document.querySelector("#read").checked === true) {
+            read = "Yes";
+        }
+        else {
+            read = "No";
+        }
+        newBook = new Book(title, author, pages, read);
+        myLibrary.push(newBook);
+          
         displayLib();
     });
 }
@@ -68,3 +72,6 @@ let displayLib = (Book) => {
 };
 displayLib();
 addBookToLibrary();
+
+const cb = document.querySelector("#read");
+console.log(cb.checked);
