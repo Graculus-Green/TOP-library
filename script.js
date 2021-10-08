@@ -11,7 +11,6 @@ let myLibrary = [{
     read: "No",
 },];
 
-
 let form = document.querySelector("form");
 let addTitle = document.querySelector('#title');
 let addAuthor = document.querySelector('#author');
@@ -27,26 +26,33 @@ class Book {
     }
 };
 
+let isBookInLib = (book) => {
+    return myLibrary.some((book) => {
+        return book.title === title
+    });
+};
+
 let addBookToLibrary = () => {
-    document.querySelector('#submit').addEventListener('click', (e) => {
+    document.querySelector('.submit-btn').addEventListener('click', (e) => {
         e.preventDefault();
         title = addTitle.value;
         author = addAuthor.value;
         pages = addPages.value;
 
-        if (document.querySelector("#read").checked === true) {
+        if (document.querySelector("#read-check").checked === true) {
             read = "Yes";
         }
         else {
             read = "No";
         }
         newBook = new Book(title, author, pages, read);
+        if (isBookInLib(newBook) === false){
         myLibrary.push(newBook);
+        }
           
         displayLib();
     });
 }
-
 
 let displayLib = (Book) => {
     let tableRef = document.querySelector('#table-body');
@@ -72,6 +78,3 @@ let displayLib = (Book) => {
 };
 displayLib();
 addBookToLibrary();
-
-const cb = document.querySelector("#read");
-console.log(cb.checked);

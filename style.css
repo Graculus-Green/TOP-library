@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 64px;
+    object-fit: fill;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:78%;
+    flex: 1;
+    margin: 16px;
+}
+label {
+    text-align: left;
+    width: 100%;
+}
+input {
+    width: 98%;
+    margin-top: 8px; 
+    margin-bottom: 8px;
+    padding: 8px;
+}
+.check {
+    display: flex;
+    flex-direction: row;
+    margin-top: 16px;
+    justify-content: space-between;
+    object-fit: fill;
+    width: 100%;
+}
+#read-check {
+    margin: 0px;
+    justify-content: right;
+    width: auto;
+    height: 120%;
+}
+
+.lib-table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.submit-btn {
+    background-color: rgba(100, 5, 76, 0.801);
+    color: snow;
+    border-radius: 10px;
+    padding:8px;
+    width:100%;
+    margin: 16px;
+    font-weight: 900;
+    box-shadow: 8px 8px 16px rgb(0, 0, 0,);
+}
+
+.submit-btn:active {
+    background-color: rgba(44, 1, 33, 0.801);
+    color: snow;
+    transform: translateY(2px);
+  }
+
+table, tr, td, tr, th {
+    margin: 32px;
+    border: 1px solid slategrey;
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: middle;
+    padding: 6px;
+}
+
+tr:nth-child(odd) {
+    background-color: #6d6d7a8f;
+}
+th {
+    background-color: rgba(100, 5, 76, 0.801);
+    color: snow;
+}
+tr:hover {
+    background-color: cadetblue;
+}
+
