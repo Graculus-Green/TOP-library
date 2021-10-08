@@ -29,23 +29,25 @@ class Book {
 
 let addBookToLibrary = () => {
     document.querySelector('#submit').addEventListener('click', (e) => {
-
+        e.preventDefault();
         title = addTitle.value;
         author = addAuthor.value;
         pages = addPages.value;
         read = addRead.value
 
         newBook = new Book(title, author, pages, read)
-        myList.push(newBook)
+        myLibrary.push(newBook)
         
         
-        return displayLib;
+        displayLib();
     });
 }
 
 
 let displayLib = (Book) => {
-    let tableRef = document.querySelector('.lib-table');
+    let tableRef = document.querySelector('#table-body');
+    tableRef.innerHTML = '';
+
     myLibrary.forEach (book => {
         let newRow = tableRef.insertRow(-1);
 
@@ -63,6 +65,6 @@ let displayLib = (Book) => {
     }
     )
     
-}
-    
+};
 displayLib();
+addBookToLibrary();
