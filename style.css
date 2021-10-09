@@ -22,10 +22,19 @@ form {
     color: snow;
     font-weight: 900;
 }
+
+.form-header {
+    color: snow;
+    font-weight: 900;
+    
+
+}
+
 label {
     text-align: left;
     width: 100%;
 }
+
 input {
     width: 98%;
     margin-top: 8px; 
@@ -69,27 +78,54 @@ input {
     color: snow;
     transform: translateY(2px);
   }
-
-table, tr, td, tr, th {
+table {
     margin: 32px;
-    border: 1px solid slategrey;
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: middle;
+    padding: 6px;
+    border-radius: 10px;
+    background-color: rgb(19, 21, 24);
+}
+
+
+
+tbody tr:nth-child(odd) {
+    background-color: #6d6d7a8f;
+}
+tr:nth-child(even) {
+    background-color: slategrey;
+}
+
+thead{
+    background-color: rgb(19, 21, 24) ;
+}
+th {
+    background-color: rgba(100, 5, 76, 0.801);
+    color: snow;
+ 
+}
+tbody tr:hover {
+    background-color: cadetblue;
+}
+
+th:first-of-type{
+    border-top-left-radius: 10px;
+  }
+th:last-of-type{
+    border-top-right-radius: 10px;
+  }
+tr:last-of-type td:first-of-type {
+    border-bottom-left-radius: 10px;
+  }
+tr:last-of-type td:last-of-type {
+    border-bottom-right-radius: 10px;
+  }
+  
+td, tr, th {
+    margin: 32px;
     border-collapse: collapse;
     text-align: center;
     vertical-align: middle;
     padding: 6px;
 }
-
-tr:nth-child(odd) {
-    background-color: #6d6d7a8f;
-}
-tr:nth-child(even) {
-    color: snow;
-}
-th {
-    background-color: rgba(100, 5, 76, 0.801);
-    color: snow;
-}
-tr:hover {
-    background-color: cadetblue;
-}
-
