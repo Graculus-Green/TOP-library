@@ -5,16 +5,22 @@ body {
     justify-content: center;
     margin: 64px;
     object-fit: fill;
+    background-color: rgb(19, 21, 24);
 }
-
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width:78%;
+    width:75%;
     flex: 1;
     margin: 16px;
+    border: 2px solid slategrey;
+    border-radius: 10px;
+    padding: 16px;
+    background-color: #6d6d7a8f;
+    color: snow;
+    font-weight: 900;
 }
 label {
     text-align: left;
@@ -38,7 +44,7 @@ input {
     margin: 0px;
     justify-content: right;
     width: auto;
-    height: 120%;
+    min-height: 24px;
 }
 
 .lib-table {
@@ -75,6 +81,9 @@ table, tr, td, tr, th {
 
 tr:nth-child(odd) {
     background-color: #6d6d7a8f;
+}
+tr:nth-child(even) {
+    color: snow;
 }
 th {
     background-color: rgba(100, 5, 76, 0.801);
